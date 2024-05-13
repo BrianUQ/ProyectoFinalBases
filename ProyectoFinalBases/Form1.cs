@@ -15,6 +15,7 @@ namespace ProyectoFinalBases
     {
         public Form1()
         {
+            //prueba
             InitializeComponent();
         }
 
