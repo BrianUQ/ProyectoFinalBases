@@ -1,4 +1,5 @@
-﻿using  MySqlConnector;
+﻿
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace ProyectoFinalBases
@@ -11,10 +12,7 @@ namespace ProyectoFinalBases
 
         public ConexionMysql()
         {
-            cadenaConexion = "Database=" + database +
-                "; DataSource=" + server +
-                "; User id= " + user +
-                "; Password" + password;
+            cadenaConexion = "server=localhost;port=3306;database=banco;uid=root;password=;";
 
             connection = new MySqlConnection(cadenaConexion);
         }

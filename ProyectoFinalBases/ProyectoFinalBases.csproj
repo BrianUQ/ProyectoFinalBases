@@ -106,11 +106,11 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionMysql.cs" />
-    <Compile Include="CrudEnpleado.cs">
+    <Compile Include="CrudEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrudEnpleado.Designer.cs">
-      <DependentUpon>CrudEnpleado.cs</DependentUpon>
+    <Compile Include="CrudEmpleado.Designer.cs">
+      <DependentUpon>CrudEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadoConsultas.cs" />
@@ -122,8 +122,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CrudEnpleado.resx">
-      <DependentUpon>CrudEnpleado.cs</DependentUpon>
+    <EmbeddedResource Include="CrudEmpleado.resx">
+      <DependentUpon>CrudEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

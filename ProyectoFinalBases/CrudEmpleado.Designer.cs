@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalBases
 {
-    partial class CrudEnpleado
+    partial class CrudEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +45,13 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btmActualizar = new System.Windows.Forms.Button();
             this.btmEliminar = new System.Windows.Forms.Button();
-            this.data = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
+            this.dataEmpleado = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -185,14 +191,16 @@
             this.btmEliminar.UseVisualStyleBackColor = false;
             this.btmEliminar.Click += new System.EventHandler(this.btmEliminar_Click);
             // 
-            // data
+            // dataEmpleado
             // 
+            this.dataEmpleado.AllowUserToAddRows = false;
+            this.dataEmpleado.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Purple;
-            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.data.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.data.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.dataEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,21 +208,54 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Purple;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataEmpleado.Cursor = System.Windows.Forms.Cursors.Arrow;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataEmpleado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataEmpleado.Location = new System.Drawing.Point(32, 180);
+            this.dataEmpleado.Name = "dataEmpleado";
+            this.dataEmpleado.Size = new System.Drawing.Size(513, 184);
+            this.dataEmpleado.TabIndex = 13;
+            // 
+            // Codigo
+            // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Purple;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data.DefaultCellStyle = dataGridViewCellStyle3;
-            this.data.Location = new System.Drawing.Point(32, 180);
-            this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(513, 184);
-            this.data.TabIndex = 13;
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Codigo.HeaderText = "Columna";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cedula";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Direccion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Telefono";
+            this.Column4.Name = "Column4";
             // 
             // CrudEnpleado
             // 
@@ -222,7 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(589, 425);
-            this.Controls.Add(this.data);
+            this.Controls.Add(this.dataEmpleado);
             this.Controls.Add(this.btmEliminar);
             this.Controls.Add(this.btmActualizar);
             this.Controls.Add(this.textBox4);
@@ -239,7 +280,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudEnpleado";
             this.Text = "CrudEnpleado";
-            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +301,11 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btmActualizar;
         private System.Windows.Forms.Button btmEliminar;
-        private System.Windows.Forms.DataGridView data;
+        private System.Windows.Forms.DataGridView dataEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

@@ -10,8 +10,9 @@ namespace ProyectoFinalBases
     {
         public int idEmpleado {  get; set; }
         public string nombreEmpleado { get; set; }
-        public int cedulaEmpleado { get; set; }
+        public string cedulaEmpleado { get; set; }
         public string direccionEmpleado { get; set; }
+        public string telefonoEmpleado { get; set; } 
 
     }
 }

@@ -101,7 +101,7 @@ namespace ProyectoFinalBases
         private void btmEmpleados_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
-            abrirFormularioHija(new CrudEnpleado());
+            abrirFormularioHija(new CrudEmpleado());
         }
 
         private void btmTransacciones_Click(object sender, EventArgs e)
