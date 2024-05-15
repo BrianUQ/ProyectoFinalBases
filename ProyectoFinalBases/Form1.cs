@@ -21,7 +21,7 @@ namespace ProyectoFinalBases
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btmCerrar_Click(object sender, EventArgs e)
@@ -101,6 +101,7 @@ namespace ProyectoFinalBases
         private void btmEmpleados_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            abrirFormularioHija(new CrudEnpleado());
         }
 
         private void btmTransacciones_Click(object sender, EventArgs e)
@@ -182,6 +183,20 @@ namespace ProyectoFinalBases
         private void btmInformeEmpleados_Click(object sender, EventArgs e)
         {
             subMenuReporte.Visible = false;
+        }
+
+        private void abrirFormularioHija(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+            {
+                this.panelContenedor.Controls.RemoveAt(0);
+            }
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
         }
     }
 }

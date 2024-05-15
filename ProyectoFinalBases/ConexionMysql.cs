@@ -1,9 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using  MySqlConnector;
 using System.Windows.Forms;
 
 namespace ProyectoFinalBases
@@ -32,7 +27,7 @@ namespace ProyectoFinalBases
                 {
                     connection.Open();
                 }
-            }
+}
             catch(System.Exception e)
             {
                 MessageBox.Show(e.ToString());
@@ -40,5 +35,6 @@ namespace ProyectoFinalBases
 
             return connection;
         }
+        
     }
 }
