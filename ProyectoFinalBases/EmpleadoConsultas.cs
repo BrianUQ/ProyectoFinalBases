@@ -58,5 +58,20 @@ namespace ProyectoFinalBases
 
             return empleados;
         }
+
+        internal bool agregarProductos(Empleado empleado)
+        {
+            string INSERT = "INSERT INTO empleado (idEmpleado, nombreEmpleado, cedulaEmpleado, direccionEmpleado, telefonoEmpleado) " +
+                "values (@codigo,@nombre,@cedula,@direccion,@telefono);";
+            MySqlCommand mCommand = new MySqlCommand(INSERT, conexionMysql.GetConnection());
+
+            mCommand.Parameters.Add(new MySqlParameter("@codigo", empleado.idEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@nombre", empleado.nombreEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@cedula", empleado.cedulaEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@direccion", empleado.direccionEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@telefono", empleado.telefonoEmpleado));
+
+            return mCommand.ExecuteNonQuery() > 0;
+        }
     }
 }

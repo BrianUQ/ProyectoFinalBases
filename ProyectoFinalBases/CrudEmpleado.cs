@@ -14,11 +14,13 @@ namespace ProyectoFinalBases
     {
         private List<Empleado> empleados;
         private EmpleadoConsultas empleadoC;
+        private Empleado empleado;
         public CrudEmpleado()
         {
             InitializeComponent();
             empleadoC = new EmpleadoConsultas();
             empleados = new List<Empleado>();
+            empleado = new Empleado();
             cargarEmpleados();
         }
 
@@ -44,7 +46,37 @@ namespace ProyectoFinalBases
 
         private void btmGuardar_Click(object sender, EventArgs e)
         {
-            
+            if (!datosCorrectos())
+            {
+                return;
+            }
+
+            guardarEmpleado();
+
+            if (empleadoC.agregarProductos(empleado))
+            {
+                MessageBox.Show("Se agrego el empleado con exito");
+                cargarEmpleados();
+                limpiarCampor();
+            }
+        }
+
+        private void limpiarCampor()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtCedula.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+        }
+
+        private void guardarEmpleado()
+        {
+            empleado.idEmpleado = int.Parse(txtCodigo.Text.Trim());
+            empleado.nombreEmpleado = txtNombre.Text.Trim();
+            empleado.cedulaEmpleado = txtCedula.Text.Trim();
+            empleado.direccionEmpleado = txtDireccion.Text.Trim();
+            empleado.telefonoEmpleado = txtTelefono.Text.Trim();
         }
 
         private void btmEliminar_Click(object sender, EventArgs e)
@@ -55,6 +87,37 @@ namespace ProyectoFinalBases
         private void txtBusquedaEmpleado_TextChanged(object sender, EventArgs e)
         {
             cargarEmpleados(txtBusquedaEmpleado.Text.Trim());
+        }
+
+        private bool datosCorrectos()
+        {
+            if (txtCodigo.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Llene la casilla Codigo");
+                return false;
+            }
+            if (txtNombre.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Llene la casilla Nombre");
+                return false;
+            }
+            if (txtCedula.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Llene la casilla Cedula");
+                return false;
+            }
+            if (txtDireccion.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Llene la casilla Direccion");
+                return false;
+            }
+            if (txtTelefono.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Llene la casilla Codigo");
+                return false;
+            }
+
+            return true;
         }
     }
 }
