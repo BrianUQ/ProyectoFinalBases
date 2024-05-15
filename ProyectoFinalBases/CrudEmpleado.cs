@@ -52,5 +52,9 @@ namespace ProyectoFinalBases
 
         }
 
+        private void txtBusquedaEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            cargarEmpleados(txtBusquedaEmpleado.Text.Trim());
+        }
     }
 }
