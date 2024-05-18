@@ -47,11 +47,12 @@
             this.btmEliminar = new System.Windows.Forms.Button();
             this.dataEmpleado = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBusquedaEmpleado = new System.Windows.Forms.TextBox();
+            this.Limpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             this.btmGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btmGuardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmGuardar.ForeColor = System.Drawing.Color.White;
-            this.btmGuardar.Location = new System.Drawing.Point(317, 159);
+            this.btmGuardar.Location = new System.Drawing.Point(479, 130);
             this.btmGuardar.Name = "btmGuardar";
             this.btmGuardar.Size = new System.Drawing.Size(75, 23);
             this.btmGuardar.TabIndex = 5;
@@ -175,6 +176,7 @@
             this.btmActualizar.TabIndex = 11;
             this.btmActualizar.Text = "Actualizar";
             this.btmActualizar.UseVisualStyleBackColor = false;
+            this.btmActualizar.Click += new System.EventHandler(this.btmActualizar_Click);
             // 
             // btmEliminar
             // 
@@ -213,10 +215,10 @@
             this.dataEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Nombre,
+            this.Cedula,
+            this.Direccion,
+            this.Telefono});
             this.dataEmpleado.Cursor = System.Windows.Forms.Cursors.Arrow;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -228,35 +230,37 @@
             this.dataEmpleado.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataEmpleado.Location = new System.Drawing.Point(41, 188);
             this.dataEmpleado.Name = "dataEmpleado";
+            this.dataEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataEmpleado.Size = new System.Drawing.Size(513, 184);
             this.dataEmpleado.TabIndex = 13;
+            this.dataEmpleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmpleado_CellDoubleClick);
             // 
             // Codigo
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Codigo.HeaderText = "Columna";
+            this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             // 
-            // Column1
+            // Nombre
             // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // Column2
+            // Cedula
             // 
-            this.Column2.HeaderText = "Cedula";
-            this.Column2.Name = "Column2";
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.Name = "Cedula";
             // 
-            // Column3
+            // Direccion
             // 
-            this.Column3.HeaderText = "Direccion";
-            this.Column3.Name = "Column3";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
             // 
-            // Column4
+            // Telefono
             // 
-            this.Column4.HeaderText = "Telefono";
-            this.Column4.Name = "Column4";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
             // 
             // txtBusquedaEmpleado
             // 
@@ -267,12 +271,29 @@
             this.txtBusquedaEmpleado.TabIndex = 14;
             this.txtBusquedaEmpleado.TextChanged += new System.EventHandler(this.txtBusquedaEmpleado_TextChanged);
             // 
+            // Limpiar
+            // 
+            this.Limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Limpiar.FlatAppearance.BorderSize = 0;
+            this.Limpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Limpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Limpiar.ForeColor = System.Drawing.Color.White;
+            this.Limpiar.Location = new System.Drawing.Point(398, 130);
+            this.Limpiar.Name = "Limpiar";
+            this.Limpiar.Size = new System.Drawing.Size(75, 23);
+            this.Limpiar.TabIndex = 15;
+            this.Limpiar.Text = "Limpiar";
+            this.Limpiar.UseVisualStyleBackColor = false;
+            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
+            // 
             // CrudEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(589, 425);
+            this.Controls.Add(this.Limpiar);
             this.Controls.Add(this.txtBusquedaEmpleado);
             this.Controls.Add(this.dataEmpleado);
             this.Controls.Add(this.btmEliminar);
@@ -313,11 +334,12 @@
         private System.Windows.Forms.Button btmActualizar;
         private System.Windows.Forms.Button btmEliminar;
         private System.Windows.Forms.DataGridView dataEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox txtBusquedaEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.Button Limpiar;
     }
 }

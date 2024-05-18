@@ -59,7 +59,28 @@ namespace ProyectoFinalBases
             return empleados;
         }
 
-        internal bool agregarProductos(Empleado empleado)
+        internal bool actualizarEmpleado(Empleado empleado)
+        {
+            string UPDATE = "UPDATE empleado SET " +
+                "idEmpleado = @codigo, " +
+                "nombreEmpleado = @nombre, " +
+                "cedulaEmpleado = @cedula, " +
+                "direccionEmpleado = @direccion, " +
+                "telefonoEmpleado = @telefono " +
+                "WHERE idEmpleado = @codigo;";
+                
+            MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());
+
+            mCommand.Parameters.Add(new MySqlParameter("@codigo", empleado.idEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@nombre", empleado.nombreEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@cedula", empleado.cedulaEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@direccion", empleado.direccionEmpleado));
+            mCommand.Parameters.Add(new MySqlParameter("@telefono", empleado.telefonoEmpleado));
+
+            return mCommand.ExecuteNonQuery() > 0;
+        }
+
+        internal bool agregarEmpleado(Empleado empleado)
         {
             string INSERT = "INSERT INTO empleado (idEmpleado, nombreEmpleado, cedulaEmpleado, direccionEmpleado, telefonoEmpleado) " +
                 "values (@codigo,@nombre,@cedula,@direccion,@telefono);";
@@ -71,6 +92,15 @@ namespace ProyectoFinalBases
             mCommand.Parameters.Add(new MySqlParameter("@direccion", empleado.direccionEmpleado));
             mCommand.Parameters.Add(new MySqlParameter("@telefono", empleado.telefonoEmpleado));
 
+            return mCommand.ExecuteNonQuery() > 0;
+        }
+
+        internal bool eliminarEmpleado(Empleado empleado)
+        {
+            string DELETE = "DELETE FROM empleado WHERE idEmpleado=@codigo;";
+            MySqlCommand mCommand = new MySqlCommand(DELETE, conexionMysql.GetConnection());
+            mCommand.Parameters.Add(new MySqlParameter("@codigo", empleado.idEmpleado));
+         
             return mCommand.ExecuteNonQuery() > 0;
         }
     }

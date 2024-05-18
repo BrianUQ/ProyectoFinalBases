@@ -53,7 +53,7 @@ namespace ProyectoFinalBases
 
             guardarEmpleado();
 
-            if (empleadoC.agregarProductos(empleado))
+            if (empleadoC.agregarEmpleado(empleado))
             {
                 MessageBox.Show("Se agrego el empleado con exito");
                 cargarEmpleados();
@@ -81,7 +81,35 @@ namespace ProyectoFinalBases
 
         private void btmEliminar_Click(object sender, EventArgs e)
         {
+            if(idVacio() == -1)
+            {
+                return;
+            }
 
+            if(MessageBox.Show("Desea eliminar el producto?", "Eliminar producto",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                guardarEmpleado();
+                if (empleadoC.eliminarEmpleado(empleado))
+                {
+                    MessageBox.Show("Se elimino el empleado con exito");
+                    cargarEmpleados();
+                    limpiarCampor();
+                }
+            }
+        }
+
+        private int idVacio()
+        {
+            if (!txtCodigo.Text.Trim().Equals(""))
+            {
+                if(int.TryParse(txtCodigo.Text.Trim(), out int id))
+                {
+                    return id;  
+                }
+                else return -1;
+            }
+            else return -1;
         }
 
         private void txtBusquedaEmpleado_TextChanged(object sender, EventArgs e)
@@ -118,6 +146,40 @@ namespace ProyectoFinalBases
             }
 
             return true;
+        }
+
+ 
+
+        private void btmActualizar_Click(object sender, EventArgs e)
+        {
+            if (!datosCorrectos())
+            {
+                return;
+            }
+
+            guardarEmpleado();
+
+            if (empleadoC.actualizarEmpleado(empleado))
+            {
+                MessageBox.Show("Se actualizo el empleado con exito");
+                cargarEmpleados();
+                limpiarCampor();
+            }
+        }
+
+        private void Limpiar_Click(object sender, EventArgs e)
+        {
+            limpiarCampor();
+        }
+
+        private void dataEmpleado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dataEmpleado.Rows[e.RowIndex];
+            txtCodigo.Text = Convert.ToString(fila.Cells["Codigo"].Value);
+            txtNombre.Text = Convert.ToString(fila.Cells["Nombre"].Value);
+            txtCedula.Text = Convert.ToString(fila.Cells["Cedula"].Value);
+            txtDireccion.Text = Convert.ToString(fila.Cells["Direccion"].Value);
+            txtTelefono.Text = Convert.ToString(fila.Cells["Telefono"].Value);
         }
     }
 }
