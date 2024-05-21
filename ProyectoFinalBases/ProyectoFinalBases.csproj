@@ -104,16 +104,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="ConexionMysql.cs" />
+    <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="Conexion\ConexionMysql.cs" />
+    <Compile Include="CrudCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudCargo.Designer.cs">
+      <DependentUpon>CrudCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudDepartamento.Designer.cs">
+      <DependentUpon>CrudDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrudEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrudEmpleado.Designer.cs">
       <DependentUpon>CrudEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empleado.cs" />
-    <Compile Include="EmpleadoConsultas.cs" />
+    <Compile Include="CrudPrioridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudPrioridad.Designer.cs">
+      <DependentUpon>CrudPrioridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudProfesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudProfesion.Designer.cs">
+      <DependentUpon>CrudProfesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Cargo.cs" />
+    <Compile Include="Entidades\Departamento.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Conexion\EmpleadoConsultas.cs" />
+    <Compile Include="Entidades\Municipio.cs" />
+    <Compile Include="Entidades\Prioridad.cs" />
+    <Compile Include="Entidades\Profesion.cs" />
+    <Compile Include="Entidades\Sucursal.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +158,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrudCargo.resx">
+      <DependentUpon>CrudCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudDepartamento.resx">
+      <DependentUpon>CrudDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrudEmpleado.resx">
       <DependentUpon>CrudEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudPrioridad.resx">
+      <DependentUpon>CrudPrioridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudProfesion.resx">
+      <DependentUpon>CrudProfesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

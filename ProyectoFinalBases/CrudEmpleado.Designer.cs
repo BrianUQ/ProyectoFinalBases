@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(281, 20);
+            this.label1.Location = new System.Drawing.Point(314, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(281, 61);
+            this.label4.Location = new System.Drawing.Point(314, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 3;
@@ -114,7 +114,7 @@
             this.btmGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btmGuardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmGuardar.ForeColor = System.Drawing.Color.White;
-            this.btmGuardar.Location = new System.Drawing.Point(479, 130);
+            this.btmGuardar.Location = new System.Drawing.Point(317, 159);
             this.btmGuardar.Name = "btmGuardar";
             this.btmGuardar.Size = new System.Drawing.Size(75, 23);
             this.btmGuardar.TabIndex = 5;
@@ -127,15 +127,15 @@
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(95, 20);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(160, 21);
+            this.txtCodigo.Size = new System.Drawing.Size(170, 21);
             this.txtCodigo.TabIndex = 6;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(350, 20);
+            this.txtNombre.Location = new System.Drawing.Point(384, 20);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(160, 21);
+            this.txtNombre.Size = new System.Drawing.Size(170, 21);
             this.txtNombre.TabIndex = 7;
             // 
             // txtCedula
@@ -143,15 +143,15 @@
             this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(95, 61);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(160, 21);
+            this.txtCedula.Size = new System.Drawing.Size(170, 21);
             this.txtCedula.TabIndex = 8;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(350, 61);
+            this.txtDireccion.Location = new System.Drawing.Point(384, 58);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(160, 21);
+            this.txtDireccion.Size = new System.Drawing.Size(170, 21);
             this.txtDireccion.TabIndex = 9;
             // 
             // txtTelefono
@@ -159,7 +159,7 @@
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(95, 105);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(160, 21);
+            this.txtTelefono.Size = new System.Drawing.Size(170, 21);
             this.txtTelefono.TabIndex = 10;
             // 
             // btmActualizar
@@ -279,7 +279,7 @@
             this.Limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Limpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Limpiar.ForeColor = System.Drawing.Color.White;
-            this.Limpiar.Location = new System.Drawing.Point(398, 130);
+            this.Limpiar.Location = new System.Drawing.Point(479, 88);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(75, 23);
             this.Limpiar.TabIndex = 15;
