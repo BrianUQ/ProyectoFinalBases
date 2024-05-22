@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudEmpleado));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +54,9 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBusquedaEmpleado = new System.Windows.Forms.TextBox();
             this.Limpiar = new System.Windows.Forms.Button();
+            this.btmCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -287,12 +290,26 @@
             this.Limpiar.UseVisualStyleBackColor = false;
             this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
+            // btmCerrar
+            // 
+            this.btmCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btmCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btmCerrar.Image")));
+            this.btmCerrar.Location = new System.Drawing.Point(571, 3);
+            this.btmCerrar.Name = "btmCerrar";
+            this.btmCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btmCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btmCerrar.TabIndex = 16;
+            this.btmCerrar.TabStop = false;
+            this.btmCerrar.Click += new System.EventHandler(this.btmCerrar_Click);
+            // 
             // CrudEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(589, 425);
+            this.Controls.Add(this.btmCerrar);
             this.Controls.Add(this.Limpiar);
             this.Controls.Add(this.txtBusquedaEmpleado);
             this.Controls.Add(this.dataEmpleado);
@@ -313,6 +330,7 @@
             this.Name = "CrudEmpleado";
             this.Text = "CrudEnpleado";
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.Button Limpiar;
+        private System.Windows.Forms.PictureBox btmCerrar;
     }
 }

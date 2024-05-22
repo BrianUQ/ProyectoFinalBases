@@ -1,11 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
+using ProyectoFinalBases.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinalBases
+namespace ProyectoFinalBases.Conexion
 {
     internal class EmpleadoConsultas
     {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoFinalBases.Conexion;
+using ProyectoFinalBases.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -180,6 +182,11 @@ namespace ProyectoFinalBases
             txtCedula.Text = Convert.ToString(fila.Cells["Cedula"].Value);
             txtDireccion.Text = Convert.ToString(fila.Cells["Direccion"].Value);
             txtTelefono.Text = Convert.ToString(fila.Cells["Telefono"].Value);
+        }
+
+        private void btmCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

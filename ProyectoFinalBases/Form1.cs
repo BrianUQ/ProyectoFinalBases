@@ -92,6 +92,8 @@ namespace ProyectoFinalBases
         private void btmCargo_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudCargo crud = new CrudCargo();
+            abrirFormularioHija(crud);
         }
 
         private void btmProfesiones_Click(object sender, EventArgs e)
@@ -102,7 +104,8 @@ namespace ProyectoFinalBases
         private void btmEmpleados_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
-            abrirFormularioHija(new CrudEmpleado());
+            CrudEmpleado crud = new CrudEmpleado();
+            abrirFormularioHija(crud);
         }
 
         private void btmTransacciones_Click(object sender, EventArgs e)
@@ -190,14 +193,19 @@ namespace ProyectoFinalBases
         {
             if (this.panelContenedor.Controls.Count > 0)
             {
+
                 this.panelContenedor.Controls.RemoveAt(0);
             }
             Form fh = formhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+            if(fh != null)
+            {
+                fh.TopLevel = false;
+                fh.Dock = DockStyle.Fill;
+                this.panelContenedor.Controls.Add(fh);
+                this.panelContenedor.Tag = fh;
+                fh.Show();
+            }
+            
         }
     }
 }

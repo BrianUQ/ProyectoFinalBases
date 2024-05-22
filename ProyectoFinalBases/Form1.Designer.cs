@@ -64,11 +64,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btmContratos = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.subMenuAyudas = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btmAcercaDe = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btmAyudasApp = new System.Windows.Forms.Button();
+            this.subMenuReporte = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btmInformeEmpleados = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btmListarSucursales = new System.Windows.Forms.Button();
             this.subMenuUtilidades = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btmBitacora = new System.Windows.Forms.Button();
@@ -78,11 +78,11 @@
             this.btmCalculadora = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.btmUsuarios = new System.Windows.Forms.Button();
-            this.subMenuReporte = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.btmInformeEmpleados = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btmListarSucursales = new System.Windows.Forms.Button();
+            this.subMenuAyudas = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btmAcercaDe = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btmAyudasApp = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btmRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btmMinimizar)).BeginInit();
@@ -92,9 +92,9 @@
             this.subMenuEntidades.SuspendLayout();
             this.subMenuTransaccion.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            this.subMenuAyudas.SuspendLayout();
-            this.subMenuUtilidades.SuspendLayout();
             this.subMenuReporte.SuspendLayout();
+            this.subMenuUtilidades.SuspendLayout();
+            this.subMenuAyudas.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -543,66 +543,66 @@
             this.panelContenedor.Size = new System.Drawing.Size(589, 425);
             this.panelContenedor.TabIndex = 2;
             // 
-            // subMenuAyudas
+            // subMenuReporte
             // 
-            this.subMenuAyudas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.subMenuAyudas.Controls.Add(this.panel9);
-            this.subMenuAyudas.Controls.Add(this.btmAcercaDe);
-            this.subMenuAyudas.Controls.Add(this.panel8);
-            this.subMenuAyudas.Controls.Add(this.btmAyudasApp);
-            this.subMenuAyudas.Location = new System.Drawing.Point(0, 208);
-            this.subMenuAyudas.Name = "subMenuAyudas";
-            this.subMenuAyudas.Size = new System.Drawing.Size(150, 69);
-            this.subMenuAyudas.TabIndex = 2;
-            this.subMenuAyudas.Visible = false;
+            this.subMenuReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.subMenuReporte.Controls.Add(this.panel17);
+            this.subMenuReporte.Controls.Add(this.btmInformeEmpleados);
+            this.subMenuReporte.Controls.Add(this.panel19);
+            this.subMenuReporte.Controls.Add(this.btmListarSucursales);
+            this.subMenuReporte.Location = new System.Drawing.Point(0, 132);
+            this.subMenuReporte.Name = "subMenuReporte";
+            this.subMenuReporte.Size = new System.Drawing.Size(150, 69);
+            this.subMenuReporte.TabIndex = 4;
+            this.subMenuReporte.Visible = false;
             // 
-            // panel9
+            // panel17
             // 
-            this.panel9.BackColor = System.Drawing.Color.Purple;
-            this.panel9.Location = new System.Drawing.Point(0, 37);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 28);
-            this.panel9.TabIndex = 7;
+            this.panel17.BackColor = System.Drawing.Color.Purple;
+            this.panel17.Location = new System.Drawing.Point(0, 37);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(5, 28);
+            this.panel17.TabIndex = 7;
             // 
-            // btmAcercaDe
+            // btmInformeEmpleados
             // 
-            this.btmAcercaDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmAcercaDe.FlatAppearance.BorderSize = 0;
-            this.btmAcercaDe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmAcercaDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmAcercaDe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmAcercaDe.Location = new System.Drawing.Point(3, 37);
-            this.btmAcercaDe.Name = "btmAcercaDe";
-            this.btmAcercaDe.Size = new System.Drawing.Size(147, 28);
-            this.btmAcercaDe.TabIndex = 8;
-            this.btmAcercaDe.Text = "Acerca de...";
-            this.btmAcercaDe.UseVisualStyleBackColor = false;
-            this.btmAcercaDe.Click += new System.EventHandler(this.btmAcercaDe_Click);
+            this.btmInformeEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmInformeEmpleados.FlatAppearance.BorderSize = 0;
+            this.btmInformeEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmInformeEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmInformeEmpleados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmInformeEmpleados.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmInformeEmpleados.Location = new System.Drawing.Point(3, 37);
+            this.btmInformeEmpleados.Name = "btmInformeEmpleados";
+            this.btmInformeEmpleados.Size = new System.Drawing.Size(147, 28);
+            this.btmInformeEmpleados.TabIndex = 8;
+            this.btmInformeEmpleados.Text = "Informe Empleados";
+            this.btmInformeEmpleados.UseVisualStyleBackColor = false;
+            this.btmInformeEmpleados.Click += new System.EventHandler(this.btmInformeEmpleados_Click);
             // 
-            // panel8
+            // panel19
             // 
-            this.panel8.BackColor = System.Drawing.Color.Purple;
-            this.panel8.Location = new System.Drawing.Point(0, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 28);
-            this.panel8.TabIndex = 5;
+            this.panel19.BackColor = System.Drawing.Color.Purple;
+            this.panel19.Location = new System.Drawing.Point(0, 3);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(5, 28);
+            this.panel19.TabIndex = 5;
             // 
-            // btmAyudasApp
+            // btmListarSucursales
             // 
-            this.btmAyudasApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmAyudasApp.FlatAppearance.BorderSize = 0;
-            this.btmAyudasApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmAyudasApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmAyudasApp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmAyudasApp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmAyudasApp.Location = new System.Drawing.Point(3, 3);
-            this.btmAyudasApp.Name = "btmAyudasApp";
-            this.btmAyudasApp.Size = new System.Drawing.Size(147, 28);
-            this.btmAyudasApp.TabIndex = 6;
-            this.btmAyudasApp.Text = "Aydas Aplicacion";
-            this.btmAyudasApp.UseVisualStyleBackColor = false;
-            this.btmAyudasApp.Click += new System.EventHandler(this.btmAyudasApp_Click);
+            this.btmListarSucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmListarSucursales.FlatAppearance.BorderSize = 0;
+            this.btmListarSucursales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmListarSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmListarSucursales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmListarSucursales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmListarSucursales.Location = new System.Drawing.Point(3, 3);
+            this.btmListarSucursales.Name = "btmListarSucursales";
+            this.btmListarSucursales.Size = new System.Drawing.Size(147, 28);
+            this.btmListarSucursales.TabIndex = 6;
+            this.btmListarSucursales.Text = "Listar Sucursales";
+            this.btmListarSucursales.UseVisualStyleBackColor = false;
+            this.btmListarSucursales.Click += new System.EventHandler(this.btmListarSucursales_Click);
             // 
             // subMenuUtilidades
             // 
@@ -717,66 +717,66 @@
             this.btmUsuarios.UseVisualStyleBackColor = false;
             this.btmUsuarios.Click += new System.EventHandler(this.btmUsuarios_Click);
             // 
-            // subMenuReporte
+            // subMenuAyudas
             // 
-            this.subMenuReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.subMenuReporte.Controls.Add(this.panel17);
-            this.subMenuReporte.Controls.Add(this.btmInformeEmpleados);
-            this.subMenuReporte.Controls.Add(this.panel19);
-            this.subMenuReporte.Controls.Add(this.btmListarSucursales);
-            this.subMenuReporte.Location = new System.Drawing.Point(0, 132);
-            this.subMenuReporte.Name = "subMenuReporte";
-            this.subMenuReporte.Size = new System.Drawing.Size(150, 69);
-            this.subMenuReporte.TabIndex = 4;
-            this.subMenuReporte.Visible = false;
+            this.subMenuAyudas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.subMenuAyudas.Controls.Add(this.panel9);
+            this.subMenuAyudas.Controls.Add(this.btmAcercaDe);
+            this.subMenuAyudas.Controls.Add(this.panel8);
+            this.subMenuAyudas.Controls.Add(this.btmAyudasApp);
+            this.subMenuAyudas.Location = new System.Drawing.Point(0, 208);
+            this.subMenuAyudas.Name = "subMenuAyudas";
+            this.subMenuAyudas.Size = new System.Drawing.Size(150, 69);
+            this.subMenuAyudas.TabIndex = 2;
+            this.subMenuAyudas.Visible = false;
             // 
-            // panel17
+            // panel9
             // 
-            this.panel17.BackColor = System.Drawing.Color.Purple;
-            this.panel17.Location = new System.Drawing.Point(0, 37);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 28);
-            this.panel17.TabIndex = 7;
+            this.panel9.BackColor = System.Drawing.Color.Purple;
+            this.panel9.Location = new System.Drawing.Point(0, 37);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(5, 28);
+            this.panel9.TabIndex = 7;
             // 
-            // btmInformeEmpleados
+            // btmAcercaDe
             // 
-            this.btmInformeEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmInformeEmpleados.FlatAppearance.BorderSize = 0;
-            this.btmInformeEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmInformeEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmInformeEmpleados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmInformeEmpleados.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmInformeEmpleados.Location = new System.Drawing.Point(3, 37);
-            this.btmInformeEmpleados.Name = "btmInformeEmpleados";
-            this.btmInformeEmpleados.Size = new System.Drawing.Size(147, 28);
-            this.btmInformeEmpleados.TabIndex = 8;
-            this.btmInformeEmpleados.Text = "Informe Empleados";
-            this.btmInformeEmpleados.UseVisualStyleBackColor = false;
-            this.btmInformeEmpleados.Click += new System.EventHandler(this.btmInformeEmpleados_Click);
+            this.btmAcercaDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmAcercaDe.FlatAppearance.BorderSize = 0;
+            this.btmAcercaDe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmAcercaDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmAcercaDe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmAcercaDe.Location = new System.Drawing.Point(3, 37);
+            this.btmAcercaDe.Name = "btmAcercaDe";
+            this.btmAcercaDe.Size = new System.Drawing.Size(147, 28);
+            this.btmAcercaDe.TabIndex = 8;
+            this.btmAcercaDe.Text = "Acerca de...";
+            this.btmAcercaDe.UseVisualStyleBackColor = false;
+            this.btmAcercaDe.Click += new System.EventHandler(this.btmAcercaDe_Click);
             // 
-            // panel19
+            // panel8
             // 
-            this.panel19.BackColor = System.Drawing.Color.Purple;
-            this.panel19.Location = new System.Drawing.Point(0, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(5, 28);
-            this.panel19.TabIndex = 5;
+            this.panel8.BackColor = System.Drawing.Color.Purple;
+            this.panel8.Location = new System.Drawing.Point(0, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 28);
+            this.panel8.TabIndex = 5;
             // 
-            // btmListarSucursales
+            // btmAyudasApp
             // 
-            this.btmListarSucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmListarSucursales.FlatAppearance.BorderSize = 0;
-            this.btmListarSucursales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmListarSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmListarSucursales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmListarSucursales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmListarSucursales.Location = new System.Drawing.Point(3, 3);
-            this.btmListarSucursales.Name = "btmListarSucursales";
-            this.btmListarSucursales.Size = new System.Drawing.Size(147, 28);
-            this.btmListarSucursales.TabIndex = 6;
-            this.btmListarSucursales.Text = "Listar Sucursales";
-            this.btmListarSucursales.UseVisualStyleBackColor = false;
-            this.btmListarSucursales.Click += new System.EventHandler(this.btmListarSucursales_Click);
+            this.btmAyudasApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmAyudasApp.FlatAppearance.BorderSize = 0;
+            this.btmAyudasApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmAyudasApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmAyudasApp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmAyudasApp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmAyudasApp.Location = new System.Drawing.Point(3, 3);
+            this.btmAyudasApp.Name = "btmAyudasApp";
+            this.btmAyudasApp.Size = new System.Drawing.Size(147, 28);
+            this.btmAyudasApp.TabIndex = 6;
+            this.btmAyudasApp.Text = "Aydas Aplicacion";
+            this.btmAyudasApp.UseVisualStyleBackColor = false;
+            this.btmAyudasApp.Click += new System.EventHandler(this.btmAyudasApp_Click);
             // 
             // Form1
             // 
@@ -799,9 +799,9 @@
             this.subMenuEntidades.ResumeLayout(false);
             this.subMenuTransaccion.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
-            this.subMenuAyudas.ResumeLayout(false);
-            this.subMenuUtilidades.ResumeLayout(false);
             this.subMenuReporte.ResumeLayout(false);
+            this.subMenuUtilidades.ResumeLayout(false);
+            this.subMenuAyudas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

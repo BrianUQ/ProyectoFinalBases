@@ -2,7 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace ProyectoFinalBases
+namespace ProyectoFinalBases.Conexion
 {
     internal class ConexionMysql : Conexion
 
