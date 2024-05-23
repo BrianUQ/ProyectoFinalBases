@@ -86,6 +86,8 @@ namespace ProyectoFinalBases
         private void btmMunicipio_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudMunicipio crud = new CrudMunicipio();
+            abrirFormularioHija(crud);
         }
 
         private void btmSucursales_Click(object sender, EventArgs e)

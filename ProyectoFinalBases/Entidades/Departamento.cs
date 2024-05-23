@@ -12,5 +12,6 @@ namespace ProyectoFinalBases.Entidades
         public String nombreDepartamento { get; set; }  
         public int poblacionDepartamento { get; set; }
 
+
     }
 }
