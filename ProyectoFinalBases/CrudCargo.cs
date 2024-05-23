@@ -166,5 +166,10 @@ namespace ProyectoFinalBases
         {
             this.Close();
         }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            cargarCargos(txtBusqueda.Text.Trim());
+        }
     }
 }

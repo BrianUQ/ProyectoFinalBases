@@ -107,6 +107,10 @@
     <Compile Include="Conexion\CargoConsultas.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Conexion\ConexionMysql.cs" />
+    <Compile Include="Conexion\DepartamentoConsultas.cs" />
+    <Compile Include="Conexion\PrioridadConsultas.cs" />
+    <Compile Include="Conexion\ProfesionConsultas.cs" />
+    <Compile Include="Conexion\UsuarioConsultas.cs" />
     <Compile Include="CrudCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +149,7 @@
     <Compile Include="Entidades\Prioridad.cs" />
     <Compile Include="Entidades\Profesion.cs" />
     <Compile Include="Entidades\Sucursal.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -116,7 +116,7 @@
             this.btmRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btmRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btmRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btmRestaurar.Image")));
-            this.btmRestaurar.Location = new System.Drawing.Point(761, 4);
+            this.btmRestaurar.Location = new System.Drawing.Point(691, 4);
             this.btmRestaurar.Name = "btmRestaurar";
             this.btmRestaurar.Size = new System.Drawing.Size(15, 15);
             this.btmRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -238,6 +238,7 @@
             this.txtBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtBusqueda.Size = new System.Drawing.Size(214, 21);
             this.txtBusqueda.TabIndex = 20;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // btmCerrar
             // 

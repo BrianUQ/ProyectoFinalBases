@@ -10,7 +10,7 @@ namespace ProyectoFinalBases.Entidades
     internal class Profesion
     {
         public int idProfesion {  get; set; }
-        public string nombreDescripsion { get; set; }
+        public string nombreProfesion { get; set; }
         public string descripcionProfesion { get; set; }
     }
 }

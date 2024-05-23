@@ -72,11 +72,15 @@ namespace ProyectoFinalBases
         private void btmDepartamento_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudDepartamento crud = new CrudDepartamento();
+            abrirFormularioHija(crud);
         }
 
         private void btmTMunicipio_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudPrioridad crud = new CrudPrioridad();
+            abrirFormularioHija(crud);
         }
 
         private void btmMunicipio_Click(object sender, EventArgs e)
@@ -99,6 +103,8 @@ namespace ProyectoFinalBases
         private void btmProfesiones_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudProfesion crud = new CrudProfesion();
+            abrirFormularioHija(crud);
         }
 
         private void btmEmpleados_Click(object sender, EventArgs e)

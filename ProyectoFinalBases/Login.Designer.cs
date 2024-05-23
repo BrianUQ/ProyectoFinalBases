@@ -28,24 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.barraTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btmCerrar = new System.Windows.Forms.PictureBox();
+            this.btmMinimizar = new System.Windows.Forms.PictureBox();
+            this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // barraTitulo
             // 
-            this.panel1.BackColor = System.Drawing.Color.Purple;
-            this.panel1.Cursor = System.Windows.Forms.Cursors.No;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 34);
-            this.panel1.TabIndex = 0;
+            this.barraTitulo.BackColor = System.Drawing.Color.Purple;
+            this.barraTitulo.Controls.Add(this.btmMinimizar);
+            this.barraTitulo.Controls.Add(this.btmCerrar);
+            this.barraTitulo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.barraTitulo.Name = "barraTitulo";
+            this.barraTitulo.Size = new System.Drawing.Size(281, 34);
+            this.barraTitulo.TabIndex = 0;
+            this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
             // label1
             // 
@@ -67,21 +76,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuario";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(90, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 21);
-            this.textBox1.TabIndex = 3;
+            this.txtUser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(90, 92);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(179, 21);
+            this.txtUser.TabIndex = 3;
             // 
-            // textBox2
+            // txtClave
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(90, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 21);
-            this.textBox2.TabIndex = 5;
+            this.txtClave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.Location = new System.Drawing.Point(90, 128);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(178, 21);
+            this.txtClave.TabIndex = 5;
             // 
             // label3
             // 
@@ -104,6 +113,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btmCerrar
+            // 
+            this.btmCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btmCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btmCerrar.Image")));
+            this.btmCerrar.Location = new System.Drawing.Point(263, 3);
+            this.btmCerrar.Name = "btmCerrar";
+            this.btmCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btmCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btmCerrar.TabIndex = 1;
+            this.btmCerrar.TabStop = false;
+            this.btmCerrar.Click += new System.EventHandler(this.btmCerrar_Click);
+            // 
+            // btmMinimizar
+            // 
+            this.btmMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btmMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btmMinimizar.Image")));
+            this.btmMinimizar.Location = new System.Drawing.Point(242, 3);
+            this.btmMinimizar.Name = "btmMinimizar";
+            this.btmMinimizar.Size = new System.Drawing.Size(15, 15);
+            this.btmMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btmMinimizar.TabIndex = 4;
+            this.btmMinimizar.TabStop = false;
+            this.btmMinimizar.Click += new System.EventHandler(this.btmMinimizar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,15 +146,18 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(281, 277);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "Login";
+            this.barraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,12 +165,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox btmCerrar;
+        private System.Windows.Forms.PictureBox btmMinimizar;
     }
 }

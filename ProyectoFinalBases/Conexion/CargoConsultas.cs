@@ -58,11 +58,11 @@ namespace ProyectoFinalBases.Conexion
 
         internal bool actualizarCargo(Cargo cargo)
         {
-            string UPDATE = "UPDATE empleado SET " +
+            string UPDATE = "UPDATE cargo SET " +
                 "idCargo = @id, " +
                 "nombreCargo = @nombre, " +
                 "salarioCargo = @salario, " +
-                "WHERE idEmpleado = @id;";
+                "WHERE idCargo = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());
 
