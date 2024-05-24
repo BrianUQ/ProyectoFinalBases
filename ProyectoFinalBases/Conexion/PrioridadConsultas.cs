@@ -61,7 +61,7 @@ namespace ProyectoFinalBases.Conexion
             string UPDATE = "UPDATE prioridad SET " +
                 "idPrioridad = @id, " +
                 "nombrePrioridad = @nombre, " +
-                "descripcionPrioridad = @descripcion, " +
+                "descripcionPrioridad = @descripcion " +
                 "WHERE idPrioridad = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());

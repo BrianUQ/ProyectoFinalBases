@@ -61,7 +61,7 @@ namespace ProyectoFinalBases.Conexion
             string UPDATE = "UPDATE cargo SET " +
                 "idCargo = @id, " +
                 "nombreCargo = @nombre, " +
-                "salarioCargo = @salario, " +
+                "salarioCargo = @salario " +
                 "WHERE idCargo = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());

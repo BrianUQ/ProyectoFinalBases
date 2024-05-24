@@ -93,6 +93,8 @@ namespace ProyectoFinalBases
         private void btmSucursales_Click(object sender, EventArgs e)
         {
             subMenuEntidades.Visible = false;
+            CrudSucursal crud = new CrudSucursal();
+            abrirFormularioHija(crud);
         }
 
         private void btmCargo_Click(object sender, EventArgs e)

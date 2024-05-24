@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudMunicipio));
             this.txtPoblacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -43,17 +44,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbPrioridad = new System.Windows.Forms.ComboBox();
             this.dataMunicipio = new System.Windows.Forms.DataGridView();
-            this.btmLimpiar = new System.Windows.Forms.Button();
-            this.btmEliminar = new System.Windows.Forms.Button();
-            this.btmActualizar = new System.Windows.Forms.Button();
-            this.btmGuardar = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Poblacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prioridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btmLimpiar = new System.Windows.Forms.Button();
+            this.btmEliminar = new System.Windows.Forms.Button();
+            this.btmActualizar = new System.Windows.Forms.Button();
+            this.btmGuardar = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btmCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPoblacion
@@ -96,7 +99,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(95, 24);
+            this.txtCodigo.Location = new System.Drawing.Point(95, 20);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(170, 21);
             this.txtCodigo.TabIndex = 14;
@@ -154,20 +157,20 @@
             // 
             this.dataMunicipio.AllowUserToAddRows = false;
             this.dataMunicipio.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Purple;
-            this.dataMunicipio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Purple;
+            this.dataMunicipio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataMunicipio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.dataMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Purple;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataMunicipio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataMunicipio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataMunicipio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataMunicipio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -176,93 +179,25 @@
             this.Departamento,
             this.Prioridad});
             this.dataMunicipio.Cursor = System.Windows.Forms.Cursors.Arrow;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Purple;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataMunicipio.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataMunicipio.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataMunicipio.Location = new System.Drawing.Point(41, 188);
             this.dataMunicipio.Name = "dataMunicipio";
             this.dataMunicipio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataMunicipio.Size = new System.Drawing.Size(513, 184);
             this.dataMunicipio.TabIndex = 23;
-            // 
-            // btmLimpiar
-            // 
-            this.btmLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmLimpiar.FlatAppearance.BorderSize = 0;
-            this.btmLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmLimpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btmLimpiar.Location = new System.Drawing.Point(41, 101);
-            this.btmLimpiar.Name = "btmLimpiar";
-            this.btmLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btmLimpiar.TabIndex = 28;
-            this.btmLimpiar.Text = "Limpiar";
-            this.btmLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // btmEliminar
-            // 
-            this.btmEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmEliminar.FlatAppearance.BorderSize = 0;
-            this.btmEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmEliminar.ForeColor = System.Drawing.Color.White;
-            this.btmEliminar.Location = new System.Drawing.Point(398, 159);
-            this.btmEliminar.Name = "btmEliminar";
-            this.btmEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btmEliminar.TabIndex = 27;
-            this.btmEliminar.Text = "Eliminar";
-            this.btmEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btmActualizar
-            // 
-            this.btmActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmActualizar.FlatAppearance.BorderSize = 0;
-            this.btmActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmActualizar.ForeColor = System.Drawing.Color.White;
-            this.btmActualizar.Location = new System.Drawing.Point(479, 159);
-            this.btmActualizar.Name = "btmActualizar";
-            this.btmActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btmActualizar.TabIndex = 26;
-            this.btmActualizar.Text = "Actualizar";
-            this.btmActualizar.UseVisualStyleBackColor = false;
-            // 
-            // btmGuardar
-            // 
-            this.btmGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmGuardar.FlatAppearance.BorderSize = 0;
-            this.btmGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmGuardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmGuardar.ForeColor = System.Drawing.Color.White;
-            this.btmGuardar.Location = new System.Drawing.Point(317, 159);
-            this.btmGuardar.Name = "btmGuardar";
-            this.btmGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btmGuardar.TabIndex = 25;
-            this.btmGuardar.Text = "Guardar";
-            this.btmGuardar.UseVisualStyleBackColor = false;
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(41, 161);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtBusqueda.Size = new System.Drawing.Size(214, 21);
-            this.txtBusqueda.TabIndex = 24;
+            this.dataMunicipio.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMunicipio_CellDoubleClick);
             // 
             // Codigo
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle7;
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.Width = 50;
@@ -290,12 +225,99 @@
             this.Prioridad.Name = "Prioridad";
             this.Prioridad.Width = 64;
             // 
+            // btmLimpiar
+            // 
+            this.btmLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmLimpiar.FlatAppearance.BorderSize = 0;
+            this.btmLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmLimpiar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btmLimpiar.Location = new System.Drawing.Point(41, 101);
+            this.btmLimpiar.Name = "btmLimpiar";
+            this.btmLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btmLimpiar.TabIndex = 28;
+            this.btmLimpiar.Text = "Limpiar";
+            this.btmLimpiar.UseVisualStyleBackColor = false;
+            this.btmLimpiar.Click += new System.EventHandler(this.btmLimpiar_Click);
+            // 
+            // btmEliminar
+            // 
+            this.btmEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmEliminar.FlatAppearance.BorderSize = 0;
+            this.btmEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmEliminar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmEliminar.ForeColor = System.Drawing.Color.White;
+            this.btmEliminar.Location = new System.Drawing.Point(398, 159);
+            this.btmEliminar.Name = "btmEliminar";
+            this.btmEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btmEliminar.TabIndex = 27;
+            this.btmEliminar.Text = "Eliminar";
+            this.btmEliminar.UseVisualStyleBackColor = false;
+            this.btmEliminar.Click += new System.EventHandler(this.btmEliminar_Click);
+            // 
+            // btmActualizar
+            // 
+            this.btmActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmActualizar.FlatAppearance.BorderSize = 0;
+            this.btmActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmActualizar.ForeColor = System.Drawing.Color.White;
+            this.btmActualizar.Location = new System.Drawing.Point(479, 159);
+            this.btmActualizar.Name = "btmActualizar";
+            this.btmActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btmActualizar.TabIndex = 26;
+            this.btmActualizar.Text = "Actualizar";
+            this.btmActualizar.UseVisualStyleBackColor = false;
+            this.btmActualizar.Click += new System.EventHandler(this.btmActualizar_Click);
+            // 
+            // btmGuardar
+            // 
+            this.btmGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmGuardar.FlatAppearance.BorderSize = 0;
+            this.btmGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmGuardar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmGuardar.ForeColor = System.Drawing.Color.White;
+            this.btmGuardar.Location = new System.Drawing.Point(317, 159);
+            this.btmGuardar.Name = "btmGuardar";
+            this.btmGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btmGuardar.TabIndex = 25;
+            this.btmGuardar.Text = "Guardar";
+            this.btmGuardar.UseVisualStyleBackColor = false;
+            this.btmGuardar.Click += new System.EventHandler(this.btmGuardar_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.Location = new System.Drawing.Point(41, 161);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txtBusqueda.Size = new System.Drawing.Size(214, 21);
+            this.txtBusqueda.TabIndex = 24;
+            // 
+            // btmCerrar
+            // 
+            this.btmCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btmCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btmCerrar.Image")));
+            this.btmCerrar.Location = new System.Drawing.Point(571, 3);
+            this.btmCerrar.Name = "btmCerrar";
+            this.btmCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btmCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btmCerrar.TabIndex = 29;
+            this.btmCerrar.TabStop = false;
+            this.btmCerrar.Click += new System.EventHandler(this.btmCerrar_Click);
+            // 
             // CrudMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(589, 425);
+            this.Controls.Add(this.btmCerrar);
             this.Controls.Add(this.btmLimpiar);
             this.Controls.Add(this.btmEliminar);
             this.Controls.Add(this.btmActualizar);
@@ -316,6 +338,7 @@
             this.Name = "CrudMunicipio";
             this.Text = "CrudMunicipio";
             ((System.ComponentModel.ISupportInitialize)(this.dataMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Poblacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prioridad;
+        private System.Windows.Forms.PictureBox btmCerrar;
     }
 }

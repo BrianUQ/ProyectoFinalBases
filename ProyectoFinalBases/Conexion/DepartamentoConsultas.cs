@@ -43,7 +43,7 @@ namespace ProyectoFinalBases.Conexion
                     departamento = new Departamento();
                     departamento.idDepartamento = mReader.GetInt16("idDepartamento");
                     departamento.nombreDepartamento = mReader.GetString("nombreDepartamento");
-                    departamento.poblacionDepartamento = mReader.GetInt16("poblacionDepartamento");
+                    departamento.poblacionDepartamento = mReader.GetInt32("poblacionDepartamento");
                     departamentos.Add(departamento);
                 }
                 mReader.Close();
@@ -61,7 +61,7 @@ namespace ProyectoFinalBases.Conexion
             string UPDATE = "UPDATE departamento SET " +
                 "idDepartamento = @id, " +
                 "nombreDepartamento = @nombre, " +
-                "poblacionDepartamento = @poblacion, " +
+                "poblacionDepartamento = @poblacion " +
                 "WHERE idDepartamento = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());

@@ -112,6 +112,7 @@
     <Compile Include="Conexion\MunicipioConsultas.cs" />
     <Compile Include="Conexion\PrioridadConsultas.cs" />
     <Compile Include="Conexion\ProfesionConsultas.cs" />
+    <Compile Include="Conexion\SucursalConsultas.cs" />
     <Compile Include="Conexion\UsuarioConsultas.cs" />
     <Compile Include="CrudCargo.cs">
       <SubType>Form</SubType>
@@ -148,6 +149,12 @@
     </Compile>
     <Compile Include="CrudProfesion.Designer.cs">
       <DependentUpon>CrudProfesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudSucursal.Designer.cs">
+      <DependentUpon>CrudSucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Cargo.cs" />
     <Compile Include="Entidades\Departamento.cs" />
@@ -189,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrudProfesion.resx">
       <DependentUpon>CrudProfesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudSucursal.resx">
+      <DependentUpon>CrudSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

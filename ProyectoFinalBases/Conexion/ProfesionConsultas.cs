@@ -61,7 +61,7 @@ namespace ProyectoFinalBases.Conexion
             string UPDATE = "UPDATE profesion SET " +
                 "idProfesion = @id, " +
                 "nombreProfesion = @nombre, " +
-                "descripcionProfesion = @descripcion, " +
+                "descripcionProfesion = @descripcion " +
                 "WHERE idProfesion = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());

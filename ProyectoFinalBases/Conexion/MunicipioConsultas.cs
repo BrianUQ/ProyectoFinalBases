@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using ProyectoFinalBases.Entidades;
 using System;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace ProyectoFinalBases.Conexion
                 "nombreMunicipio = @nombre, " +
                 "poblacionMunicipio = @poblacion, " +
                 "departamentoMunicipio = @departamento, " +
-                "prioridadMunicipio = @prioridad, " +
+                "prioridadMunicipio = @prioridad " +
                 "WHERE idMunicipio = @id;";
 
             MySqlCommand mCommand = new MySqlCommand(UPDATE, conexionMysql.GetConnection());
@@ -102,6 +103,66 @@ namespace ProyectoFinalBases.Conexion
             mCommand.Parameters.Add(new MySqlParameter("@id", municipio.idMunicipio));
 
             return mCommand.ExecuteNonQuery() > 0;
+        }
+
+        public List<Municipio> GetMunicipioDepatamento(int idDepartamento)
+        {
+            
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT * FROM municipio WHERE departamentoMunicipio = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", idDepartamento));
+                mReader = mCommand.ExecuteReader();
+
+                Municipio municipio = null;
+
+                while (mReader.Read())
+                {
+                    municipio = new Municipio();
+                    municipio.idMunicipio = mReader.GetInt16("idMunicipio");
+                    municipio.nombreMunicipio = mReader.GetString("nombreMunicipio");
+                    municipio.poblacionMunicipio = mReader.GetInt16("poblacionMunicipio");
+                    municipio.departamentoMunicipio = mReader.GetInt16("departamentoMunicipio");
+                    municipio.prioridadMunicipio = mReader.GetInt16("prioridadMunicipio");
+                    municipios.Add(municipio);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return municipios;
+        }
+
+        public int GetDepartamento(int id)
+        {
+            int idDepartamento = -1;
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT departamentoMunicipio FROM municipio WHERE idMunicipio = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", id));
+                mReader = mCommand.ExecuteReader();
+
+                if(mReader.Read()) {
+                    idDepartamento = mReader.GetInt16("departamentoMunicipio");
+                }
+                mReader.Close();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return idDepartamento;
         }
     }
 }
