@@ -15,13 +15,15 @@ namespace ProyectoFinalBases
     public partial class Form1 : Form
     {
         private BitacoraConsulta bitacoraC;
-        int bitacora;
-        public Form1(int codigoBitacora)
+        private int bitacora;
+        private int idUsuario;
+        public Form1(int codigoBitacora, int idUsuario)
         {
             //prueba
             InitializeComponent();
             bitacoraC = new BitacoraConsulta();
             bitacora = codigoBitacora;
+            idUsuario = idUsuario;
 
         }
 

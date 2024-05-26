@@ -72,6 +72,7 @@
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(573, 25);
             this.panelTitulo.TabIndex = 0;
+            this.panelTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitulo_Paint);
             // 
             // btmMinimizar
             // 

@@ -21,8 +21,9 @@ namespace ProyectoFinalBases
 
             if(login.ShowDialog() == DialogResult.OK)
             {
+                int idUsuario = login.idUsuario;
                 int idBitacora = login.idBitacora;
-                Application.Run(new Form1(idBitacora));
+                Application.Run(new Form1(idBitacora, idUsuario));
             }
             
         }
