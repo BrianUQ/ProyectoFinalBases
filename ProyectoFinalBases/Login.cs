@@ -16,13 +16,18 @@ namespace ProyectoFinalBases
     public partial class Login : Form
     {
         private Usuario usuario;
+        public int idUsuario;
+        public int idBitacora;
         private UsuarioConsultas usuarioC;
+        private BitacoraConsulta bitacoraC;
         public Login()
         {
             InitializeComponent();
             usuario = new Usuario();
-            usuarioC = new UsuarioConsultas();  
+            usuarioC = new UsuarioConsultas();
+            bitacoraC = new BitacoraConsulta(); 
         }
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -40,7 +45,9 @@ namespace ProyectoFinalBases
             string login = txtUser.Text;
             string clave = txtClave.Text;
 
-            rol = usuarioC.verificarUsuario(login, clave);
+            usuario = usuarioC.verificarUsuario(login, clave);
+            idUsuario = usuario.idUsuario;
+            rol = usuario.tipoUsuario;
 
             if (rol != 0)
             {
@@ -51,19 +58,27 @@ namespace ProyectoFinalBases
 
         private void abrirVentana(int rol)
         {
-            Form1 form;
-
+            idBitacora = bitacoraC.obtenerCodigoMaximo();
             switch (rol)
             {
                 case 1:
-                    form = new Form1();
+                    if(idBitacora == 0)
+                    {
+                        bitacoraC.RegistrarEntrada(100, usuario.idUsuario);
+                        idBitacora = 100;
+                    }
+                    else
+                    {
+                        bitacoraC.RegistrarEntrada(idBitacora + 1, usuario.idUsuario);
+                        idBitacora++;
+                    }
                     break;
                 default:
                     MessageBox.Show("No se conose el rol");
                     return;
 
             }
-            form.Show();
+            this.DialogResult = DialogResult.OK;
 
             this.Close();
         }

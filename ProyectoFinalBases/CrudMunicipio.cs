@@ -243,27 +243,6 @@ namespace ProyectoFinalBases
             }
         }
 
-        public class CmbDepartamento
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-
-            public override string ToString()
-            {
-                return Name;
-            }
-        }
-
-        public class CmbPrioridad
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public override string ToString()
-            {
-                return Nombre;
-            }
-        }
-
         private int idVacio()
         {
             if (!txtCodigo.Text.Trim().Equals(""))
@@ -280,6 +259,27 @@ namespace ProyectoFinalBases
         private void btmCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+    }
+
+    public class CmbDepartamento
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+    }
+
+    public class CmbPrioridad
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public override string ToString()
+        {
+            return Nombre;
         }
     }
 }

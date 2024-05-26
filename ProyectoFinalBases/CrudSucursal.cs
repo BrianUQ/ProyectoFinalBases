@@ -104,16 +104,6 @@ namespace ProyectoFinalBases
             }
         }
 
-        public class CmbMunicipio
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public override string ToString()
-            {
-                return Nombre;
-            }
-        }
-
         private void btmGuardar_Click(object sender, EventArgs e)
         {
             if (!datosCorrectos())
@@ -273,6 +263,16 @@ namespace ProyectoFinalBases
         private void btmCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+    }
+
+    public class CmbMunicipio
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public override string ToString()
+        {
+            return Nombre;
         }
     }
 }

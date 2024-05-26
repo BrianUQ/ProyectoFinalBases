@@ -18,10 +18,13 @@ namespace ProyectoFinalBases
             Application.SetCompatibleTextRenderingDefault(false);
 
             Login login = new Login();  
-            Application.Run(login);
 
-
-            Application.Run(new Form1());
+            if(login.ShowDialog() == DialogResult.OK)
+            {
+                int idBitacora = login.idBitacora;
+                Application.Run(new Form1(idBitacora));
+            }
+            
         }
     }
 }

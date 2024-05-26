@@ -105,9 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\BitacoraConsulta.cs" />
     <Compile Include="Conexion\CargoConsultas.cs" />
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="Conexion\ConexionMysql.cs" />
+    <Compile Include="Conexion\ContratoConsulta.cs" />
     <Compile Include="Conexion\DepartamentoConsultas.cs" />
     <Compile Include="Conexion\MunicipioConsultas.cs" />
     <Compile Include="Conexion\PrioridadConsultas.cs" />
@@ -119,6 +121,19 @@
     </Compile>
     <Compile Include="CrudCargo.Designer.cs">
       <DependentUpon>CrudCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrudContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudContrato.Designer.cs">
+      <DependentUpon>CrudContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Bitacora.cs" />
+    <Compile Include="ListaContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaContrato.Designer.cs">
+      <DependentUpon>ListaContrato.cs</DependentUpon>
     </Compile>
     <Compile Include="CrudDepartamento.cs">
       <SubType>Form</SubType>
@@ -156,7 +171,14 @@
     <Compile Include="CrudSucursal.Designer.cs">
       <DependentUpon>CrudSucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrudUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudUsuario.Designer.cs">
+      <DependentUpon>CrudUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Cargo.cs" />
+    <Compile Include="Entidades\Contrato.cs" />
     <Compile Include="Entidades\Departamento.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Conexion\EmpleadoConsultas.cs" />
@@ -182,6 +204,12 @@
     <EmbeddedResource Include="CrudCargo.resx">
       <DependentUpon>CrudCargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrudContrato.resx">
+      <DependentUpon>CrudContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaContrato.resx">
+      <DependentUpon>ListaContrato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrudDepartamento.resx">
       <DependentUpon>CrudDepartamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +228,9 @@
     <EmbeddedResource Include="CrudSucursal.resx">
       <DependentUpon>CrudSucursal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrudUsuario.resx">
+      <DependentUpon>CrudUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +245,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -228,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

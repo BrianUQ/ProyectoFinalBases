@@ -9,7 +9,7 @@ namespace ProyectoFinalBases.Entidades
     internal class Usuario
     {
         public int idUsuario {  get; set; }
-        public string usuario { get; set; }
+        public string login { get; set; }
         public string clave { get; set; }
         public int tipoUsuario { get; set; }
 

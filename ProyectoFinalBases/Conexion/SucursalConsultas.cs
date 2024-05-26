@@ -103,5 +103,66 @@ namespace ProyectoFinalBases.Conexion
 
             return mCommand.ExecuteNonQuery() > 0;
         }
+
+        internal int GetMunicipio(int id)
+        {
+            int idDepartamento = -1;
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT ubicacionSucursal FROM sucursal WHERE idSucursal = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", id));
+                mReader = mCommand.ExecuteReader();
+
+                if (mReader.Read())
+                {
+                    idDepartamento = mReader.GetInt16("ubicacionSucursal");
+                }
+                mReader.Close();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return idDepartamento;
+        }
+
+        public List<Sucursal> GetSucursalMunicipio(int idMunicipio)
+        {
+
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT * FROM sucursal WHERE ubicacionSucursal = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", idMunicipio));
+                mReader = mCommand.ExecuteReader();
+
+                Sucursal sucursal = null;
+
+                while (mReader.Read())
+                {
+                    sucursal = new Sucursal();
+                    sucursal.idSucursal = mReader.GetInt16("idSucursal");
+                    sucursal.nombreSucursal = mReader.GetString("nombreSucursal");
+                    sucursal.direccionSucursal = mReader.GetString("direccionSucursal");
+                    sucursal.presupuestoAnual = mReader.GetFloat("presupuestoAnual");
+                    sucursal.ubicacionSucrusal = mReader.GetInt16("ubicacionSucursal");
+                    sucursales.Add(sucursal);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return sucursales;
+        }
     }
 }

@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProyectoFinalBases.Conexion;
 
 namespace ProyectoFinalBases
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private BitacoraConsulta bitacoraC;
+        int bitacora;
+        public Form1(int codigoBitacora)
         {
             //prueba
             InitializeComponent();
+            bitacoraC = new BitacoraConsulta();
+            bitacora = codigoBitacora;
 
         }
 
@@ -27,6 +32,7 @@ namespace ProyectoFinalBases
 
         private void btmCerrar_Click(object sender, EventArgs e)
         {
+            bitacoraC.RegistrarSalida(bitacora);
             Application.Exit();
         }
 
@@ -130,6 +136,8 @@ namespace ProyectoFinalBases
         private void btmContratos_Click(object sender, EventArgs e)
         {
             subMenuTransaccion.Visible = false;
+            ListaContrato lista = new ListaContrato();
+            abrirFormularioHija(lista);
         }
 
         private void btmAyuda_Click(object sender, EventArgs e)
@@ -163,6 +171,8 @@ namespace ProyectoFinalBases
         private void btmUsuarios_Click(object sender, EventArgs e)
         {
             subMenuUtilidades.Visible = false;
+            CrudUsuario crud = new CrudUsuario();
+            abrirFormularioHija(crud);
         }
 
         private void btmBitacora_Click(object sender, EventArgs e)
