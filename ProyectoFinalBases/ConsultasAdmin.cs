@@ -16,15 +16,17 @@ namespace ProyectoFinalBases
     {
         private EmpleadoConsultas empleadoC;
         private List<ConsultaA1> consultasA1;
-        private List<ConsultaA2> consultasA2;
         private SucursalConsultas sucursalC;
+        private List<ConsultaA2> consultasA2;
+        private UsuarioConsultas usuarioC;
         public ConsultasAdmin()
         {
             InitializeComponent();
             empleadoC = new EmpleadoConsultas();
             consultasA1 = new List<ConsultaA1>();
-            consultasA2 = new List<ConsultaA2>();
             sucursalC = new SucursalConsultas();
+            consultasA2 = new List<ConsultaA2>();
+            usuarioC = new UsuarioConsultas();
         }
 
         private void btmBuscar_Click(object sender, EventArgs e)
@@ -38,10 +40,10 @@ namespace ProyectoFinalBases
 
         private void btmBuscarSucursales_Click(object sender, EventArgs e)
         {
-            consultasA2 = sucursalC.GetSucursalEmpleados();
+            consultasA2 = usuarioC.GetCantidadInicioSesion();
             consultas.Columns.Clear();
             consultas.DataSource = null;
-            consultas.DataSource = consultasA2.Select(s => new { s.Sucursal, s.CantidadEmpleados }).ToList();
+            consultas.DataSource = consultasA2.Select(s => new { s.Usuario, s.IniciosDeSesion }).ToList();
             consultas.AutoResizeColumns();
         }
     }

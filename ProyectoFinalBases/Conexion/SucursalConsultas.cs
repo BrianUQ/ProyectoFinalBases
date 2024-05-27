@@ -13,13 +13,13 @@ namespace ProyectoFinalBases.Conexion
         private ConexionMysql conexionMysql;
         private List<Sucursal> sucursales;
         private List<ConsultaP1> consultasP1;
-        private List<ConsultaA2> consultasA2;
+        private List<ConsultaE2> consultasE2;
         public SucursalConsultas()
         {
             conexionMysql = new ConexionMysql();
             sucursales = new List<Sucursal>();
             consultasP1 = new List<ConsultaP1>();
-            consultasA2 = new List<ConsultaA2>();
+            consultasE2 = new List<ConsultaE2>();
         }
         public List<Sucursal> GetSucursal(string filtro)
         {
@@ -205,7 +205,7 @@ namespace ProyectoFinalBases.Conexion
             return consultasP1;
         }
 
-        public List<ConsultaA2> GetSucursalEmpleados()
+        public List<ConsultaE2> GetSucursalEmpleados()
         {
 
             MySqlDataReader mReader = null;
@@ -219,14 +219,14 @@ namespace ProyectoFinalBases.Conexion
                 MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
                 mReader = mCommand.ExecuteReader();
 
-                ConsultaA2 consulta = null;
+                ConsultaE2 consulta = null;
 
                 while (mReader.Read())
                 {
-                    consulta = new ConsultaA2();
+                    consulta = new ConsultaE2();
                     consulta.Sucursal = mReader.GetString("nombreSucursal");
                     consulta.CantidadEmpleados = mReader.GetInt16("Empleados");
-                    consultasA2.Add(consulta);
+                    consultasE2.Add(consulta);
                 }
                 mReader.Close();
             }
@@ -235,7 +235,7 @@ namespace ProyectoFinalBases.Conexion
                 throw;
             }
 
-            return consultasA2;
+            return consultasE2;
         }
 
 
@@ -249,7 +249,7 @@ namespace ProyectoFinalBases.Conexion
         public string Departamento;
     }
 
-    public class ConsultaA2
+    public class ConsultaE2
     {
         public string Sucursal;
         public int CantidadEmpleados;

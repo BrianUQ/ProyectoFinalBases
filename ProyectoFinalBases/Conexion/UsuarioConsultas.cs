@@ -16,11 +16,13 @@ namespace ProyectoFinalBases.Conexion
     {
         private ConexionMysql conexionMysql;
         private List<Usuario> usuarios;
+        private List<ConsultaA2> consultasA2;
 
         public UsuarioConsultas()
         {
             conexionMysql = new ConexionMysql();
             usuarios = new List<Usuario>();
+            consultasA2 = new List<ConsultaA2>();
         }
 
         public Usuario verificarUsuario(string login, string clave)
@@ -166,6 +168,42 @@ namespace ProyectoFinalBases.Conexion
             return mCommand.ExecuteNonQuery() > 0;
         }
 
-        
+        public List<ConsultaA2> GetCantidadInicioSesion()
+        {
+
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT u.login, COUNT(b.usuarioBitacora) AS Usuarios " +
+                    "FROM usuario u " +
+                    "JOIN bitacora b ON u.idUsuario = b.usuarioBitacora " +
+                    "GROUP BY u.login";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+                mReader = mCommand.ExecuteReader();
+
+                ConsultaA2 consulta = null;
+
+                while (mReader.Read())
+                {
+                    consulta = new ConsultaA2();
+                    consulta.Usuario = mReader.GetString("login");
+                    consulta.IniciosDeSesion = mReader.GetInt16("Usuarios");
+                    consultasA2.Add(consulta);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consultasA2;
+        }
+    }
+
+    public class ConsultaA2
+    {
+        public string Usuario;
+        public int IniciosDeSesion;
     }
 }

@@ -35,11 +35,11 @@
             this.btmBuscarSucursales = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btmBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.consultas = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.consultas)).BeginInit();
@@ -70,6 +70,7 @@
             this.btmBuscarSucursales.TabIndex = 31;
             this.btmBuscarSucursales.Text = "Buscar";
             this.btmBuscarSucursales.UseVisualStyleBackColor = false;
+            this.btmBuscarSucursales.Click += new System.EventHandler(this.btmBuscarSucursales_Click);
             // 
             // label3
             // 
@@ -91,6 +92,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 100);
             this.panel1.TabIndex = 35;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(69, 29);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(125, 21);
+            this.txtCodigo.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Codigo";
             // 
             // btmBuscar
             // 
@@ -150,22 +167,6 @@
             this.consultas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.consultas.Size = new System.Drawing.Size(513, 230);
             this.consultas.TabIndex = 34;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Codigo";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(69, 29);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(125, 21);
-            this.txtCodigo.TabIndex = 33;
             // 
             // ConsultasEsporadico
             // 

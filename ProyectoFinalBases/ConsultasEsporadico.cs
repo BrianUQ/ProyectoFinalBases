@@ -16,11 +16,15 @@ namespace ProyectoFinalBases
     {
         private ConsultaE1 consultaE1;
         private EmpleadoConsultas empleadoC;
+        private List<ConsultaE2> consultasE2;
+        private SucursalConsultas sucursalC;
         public ConsultasEsporadico()
         {
             InitializeComponent();
             consultaE1 = new ConsultaE1();
             empleadoC = new EmpleadoConsultas();
+            consultasE2 = new List<ConsultaE2>();
+            sucursalC = new SucursalConsultas();
         }
 
         private void btmBuscar_Click(object sender, EventArgs e)
@@ -53,6 +57,15 @@ namespace ProyectoFinalBases
                 MessageBox.Show("Ingrese el empleado");
                 return;
             }
+        }
+
+        private void btmBuscarSucursales_Click(object sender, EventArgs e)
+        {
+            consultasE2 = sucursalC.GetSucursalEmpleados();
+            consultas.Columns.Clear();
+            consultas.DataSource = null;
+            consultas.DataSource = consultasE2.Select(s => new { s.Sucursal, s.CantidadEmpleados }).ToList();
+            consultas.AutoResizeColumns();
         }
     }
 }
