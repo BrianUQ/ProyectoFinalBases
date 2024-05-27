@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudSucursal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelmunicipio = new System.Windows.Forms.Label();
             this.cbMunicipio = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,15 +48,15 @@
             this.btmGuardar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.dataSucursal = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Presupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btmLimpiar = new System.Windows.Forms.Button();
             this.btmCerrar = new System.Windows.Forms.PictureBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btmCerrar)).BeginInit();
             this.SuspendLayout();
@@ -255,37 +255,6 @@
             this.dataSucursal.TabIndex = 33;
             this.dataSucursal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSucursal_CellDoubleClick);
             // 
-            // Codigo
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Direccion
-            // 
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 150;
-            // 
-            // Presupuesto
-            // 
-            this.Presupuesto.HeaderText = "Presupuesto";
-            this.Presupuesto.Name = "Presupuesto";
-            this.Presupuesto.Width = 114;
-            // 
-            // Municipio
-            // 
-            this.Municipio.HeaderText = "Municipio";
-            this.Municipio.Name = "Municipio";
-            this.Municipio.Width = 64;
-            // 
             // btmLimpiar
             // 
             this.btmLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -333,6 +302,37 @@
             this.label5.Size = new System.Drawing.Size(57, 16);
             this.label5.TabIndex = 40;
             this.label5.Text = "Direccion";
+            // 
+            // Municipio
+            // 
+            this.Municipio.HeaderText = "Municipio";
+            this.Municipio.Name = "Municipio";
+            this.Municipio.Width = 64;
+            // 
+            // Presupuesto
+            // 
+            this.Presupuesto.HeaderText = "Presupuesto";
+            this.Presupuesto.Name = "Presupuesto";
+            this.Presupuesto.Width = 114;
+            // 
+            // Direccion
+            // 
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Codigo
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Codigo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 50;
             // 
             // CrudSucursal
             // 
@@ -386,14 +386,14 @@
         private System.Windows.Forms.Button btmGuardar;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.DataGridView dataSucursal;
+        private System.Windows.Forms.Button btmLimpiar;
+        private System.Windows.Forms.PictureBox btmCerrar;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Presupuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
-        private System.Windows.Forms.Button btmLimpiar;
-        private System.Windows.Forms.PictureBox btmCerrar;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label5;
     }
 }

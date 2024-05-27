@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoFinalBases.Conexion;
+using ProyectoFinalBases.Entidades;
 
 namespace ProyectoFinalBases
 {
@@ -16,14 +17,24 @@ namespace ProyectoFinalBases
     {
         private BitacoraConsulta bitacoraC;
         private int bitacora;
-        private int idUsuario;
+        private Usuario usuario;
+        private UsuarioConsultas usuarioC;
         public Form1(int codigoBitacora, int idUsuario)
         {
             //prueba
             InitializeComponent();
             bitacoraC = new BitacoraConsulta();
             bitacora = codigoBitacora;
-            idUsuario = idUsuario;
+            usuario = new Usuario();
+            usuarioC = new UsuarioConsultas();
+            usuario = usuarioC.getUser(idUsuario);
+            
+            if(usuario.tipoUsuario == 2 || usuario.tipoUsuario == 3)
+            {
+                btmEntidades.Visible = false;
+                btmTransacciones.Visible = false;
+                btmUtilidades.Visible = false;
+            }
 
         }
 
@@ -180,6 +191,8 @@ namespace ProyectoFinalBases
         private void btmBitacora_Click(object sender, EventArgs e)
         {
             subMenuUtilidades.Visible = false;
+            CrudBitacora crud = new CrudBitacora();
+            abrirFormularioHija(crud);
         }
 
         private void btmCalculadora_Click(object sender, EventArgs e)
@@ -204,11 +217,37 @@ namespace ProyectoFinalBases
         private void btmListarSucursales_Click(object sender, EventArgs e)
         {
             subMenuReporte.Visible = false;
+            if (usuario.tipoUsuario == 1)
+            {
+                ConsultasAdmin consulta = new ConsultasAdmin();
+                abrirFormularioHija(consulta);
+            }
+            if(usuario.tipoUsuario == 2)
+            {
+                ConsultasParametrico consulta = new ConsultasParametrico();
+                abrirFormularioHija(consulta);
+            }
+            if (usuario.tipoUsuario == 3)
+            {
+                ConsultasEsporadico consulta = new ConsultasEsporadico();
+                abrirFormularioHija(consulta);
+            }
+            
         }
 
         private void btmInformeEmpleados_Click(object sender, EventArgs e)
         {
             subMenuReporte.Visible = false;
+            if (usuario.tipoUsuario == 1)
+            {
+                ReportesAdmin reporte = new ReportesAdmin();
+                abrirFormularioHija(reporte);
+            }
+            if (usuario.tipoUsuario == 2)
+            {
+                ConsultasParametrico consulta = new ConsultasParametrico();
+                abrirFormularioHija(consulta);
+            }
         }
 
         private void abrirFormularioHija(object formhija)

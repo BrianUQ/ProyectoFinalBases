@@ -12,11 +12,14 @@ namespace ProyectoFinalBases.Conexion
     {
         private ConexionMysql conexionMysql;
         private List<Sucursal> sucursales;
-
+        private List<ConsultaP1> consultasP1;
+        private List<ConsultaA2> consultasA2;
         public SucursalConsultas()
         {
             conexionMysql = new ConexionMysql();
             sucursales = new List<Sucursal>();
+            consultasP1 = new List<ConsultaP1>();
+            consultasA2 = new List<ConsultaA2>();
         }
         public List<Sucursal> GetSucursal(string filtro)
         {
@@ -164,5 +167,91 @@ namespace ProyectoFinalBases.Conexion
 
             return sucursales;
         }
+
+        public List<ConsultaP1> GetSucursalDepartamento(int idMunicipio)
+        {
+
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT s.nombreSucursal AS Sucursal, s.direccionSucursal AS Direccion, m.nombreMunicipio AS Municipio, d.nombreDepartamento AS Deparatamento " +
+                    "FROM sucursal s " +
+                    "JOIN municipio m ON s.ubicacionSucursal = m.idMunicipio " +
+                    "JOIN departamento d ON m.departamentoMunicipio = d.idDepartamento " +
+                    "WHERE d.idDepartamento = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", idMunicipio));
+                mReader = mCommand.ExecuteReader();
+
+                ConsultaP1 consultaP1 = null;
+
+                while (mReader.Read())
+                {
+                    consultaP1 = new ConsultaP1();
+                    consultaP1.Sucursal = mReader.GetString("Sucursal");
+                    consultaP1.Direccion = mReader.GetString("Direccion");
+                    consultaP1.Municipio = mReader.GetString("Municipio");
+                    consultaP1.Departamento = mReader.GetString("Deparatamento");
+                    consultasP1.Add(consultaP1);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consultasP1;
+        }
+
+        public List<ConsultaA2> GetSucursalEmpleados()
+        {
+
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT s.nombreSucursal, COUNT(DISTINCT e.idEmpleado) AS Empleados " +
+                    "FROM sucursal s " +
+                    "JOIN contrato c ON s.idSucursal = c.sucursalContrato " +
+                    "JOIN empleado e ON c.empleadoContrato = e.idEmpleado " +
+                    "GROUP BY s.nombreSucursal";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+                mReader = mCommand.ExecuteReader();
+
+                ConsultaA2 consulta = null;
+
+                while (mReader.Read())
+                {
+                    consulta = new ConsultaA2();
+                    consulta.Sucursal = mReader.GetString("nombreSucursal");
+                    consulta.CantidadEmpleados = mReader.GetInt16("Empleados");
+                    consultasA2.Add(consulta);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consultasA2;
+        }
+
+
+    }
+
+    public class ConsultaP1
+    {
+        public string Sucursal;
+        public string Direccion;
+        public string Municipio;
+        public string Departamento;
+    }
+
+    public class ConsultaA2
+    {
+        public string Sucursal;
+        public int CantidadEmpleados;
     }
 }

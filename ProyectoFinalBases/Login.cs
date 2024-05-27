@@ -59,25 +59,18 @@ namespace ProyectoFinalBases
         private void abrirVentana(int rol)
         {
             idBitacora = bitacoraC.obtenerCodigoMaximo();
-            switch (rol)
-            {
-                case 1:
-                    if(idBitacora == 0)
-                    {
-                        bitacoraC.RegistrarEntrada(100, usuario.idUsuario);
-                        idBitacora = 100;
-                    }
-                    else
-                    {
-                        bitacoraC.RegistrarEntrada(idBitacora + 1, usuario.idUsuario);
-                        idBitacora++;
-                    }
-                    break;
-                default:
-                    MessageBox.Show("No se conose el rol");
-                    return;
 
+            if(idBitacora == 0)
+            {
+                bitacoraC.RegistrarEntrada(100, usuario.idUsuario);
+                idBitacora = 100;
             }
+            else
+            {
+                bitacoraC.RegistrarEntrada(idBitacora + 1, usuario.idUsuario);
+                idBitacora++;
+            }
+
             this.DialogResult = DialogResult.OK;
 
             this.Close();

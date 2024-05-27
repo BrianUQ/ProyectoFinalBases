@@ -21,7 +21,6 @@ namespace ProyectoFinalBases.Conexion
         {
             int codigoMaximo = 0;
             
-            MySqlDataReader mReader = null;
             try
             {
                 string QUERY = "SELECT MAX(idBitacora) From Bitacora;";
@@ -66,6 +65,83 @@ namespace ProyectoFinalBases.Conexion
 
 
             return mCommand.ExecuteNonQuery() > 0;
+        }
+
+        public List<Bitacora> GetBitacoras(string filtro)
+        {
+            string QUERY = "SELECT * FROM bitacora ";
+            MySqlDataReader mReader = null;
+            try
+            {
+                if (filtro != "")
+                {
+                    QUERY += "WHERE " +
+                        "usuarioBitacora LIKE '%" + filtro + "%';";
+                }
+
+                MySqlCommand mComando = new MySqlCommand(QUERY);
+                mComando.Connection = conexionMysql.GetConnection();
+                mReader = mComando.ExecuteReader();
+
+                Bitacora bitacora = null;
+
+                while (mReader.Read())
+                {
+                    bitacora = new Bitacora();
+                    bitacora.idBitacora = mReader.GetInt16("idBitacora");
+                    bitacora.fechaEntrada = mReader.GetDateTime("fechaEntrada");
+                    if(!mReader.IsDBNull(mReader.GetOrdinal("fechaSalidad")))
+                    {
+                        bitacora.fechaSalida = mReader.GetDateTime("fechaSalidad");
+                    }
+                    bitacora.usuarioBitacora = mReader.GetInt16("usuarioBitacora");
+                    bitacoras.Add(bitacora);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return bitacoras;
+        }
+
+        internal List<Bitacora> buscarFecha(DateTime fecha)
+        {
+            string QUERY = "SELECT * FROM bitacora ";
+            MySqlDataReader mReader = null;
+            try
+            {
+                    QUERY += "WHERE " +
+                        "fechaEntrada >= '%" + fecha + "%';";
+
+                MySqlCommand mComando = new MySqlCommand(QUERY);
+                mComando.Connection = conexionMysql.GetConnection();
+                mReader = mComando.ExecuteReader();
+
+                Bitacora bitacora = null;
+
+                while (mReader.Read())
+                {
+                    bitacora = new Bitacora();
+                    bitacora.idBitacora = mReader.GetInt16("idBitacora");
+                    bitacora.fechaEntrada = mReader.GetDateTime("fechaEntrada");
+                    if (!mReader.IsDBNull(mReader.GetOrdinal("fechaSalidad")))
+                    {
+                        bitacora.fechaSalida = mReader.GetDateTime("fechaSalidad");
+                    }
+                    bitacora.usuarioBitacora = mReader.GetInt16("usuarioBitacora");
+                    bitacoras.Add(bitacora);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return bitacoras;
         }
     }
 }

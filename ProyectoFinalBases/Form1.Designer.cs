@@ -40,7 +40,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.btmUtilidades = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btmReportes = new System.Windows.Forms.Button();
+            this.btmReportesConsultas = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btmTransacciones = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,9 +66,9 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.subMenuReporte = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.btmInformeEmpleados = new System.Windows.Forms.Button();
+            this.btmReportes = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.btmListarSucursales = new System.Windows.Forms.Button();
+            this.btmConsultas = new System.Windows.Forms.Button();
             this.subMenuUtilidades = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btmBitacora = new System.Windows.Forms.Button();
@@ -116,7 +116,7 @@
             this.btmRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btmRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btmRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btmRestaurar.Image")));
-            this.btmRestaurar.Location = new System.Drawing.Point(691, 4);
+            this.btmRestaurar.Location = new System.Drawing.Point(761, 4);
             this.btmRestaurar.Name = "btmRestaurar";
             this.btmRestaurar.Size = new System.Drawing.Size(15, 15);
             this.btmRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +172,7 @@
             this.panelMenu.Controls.Add(this.panel6);
             this.panelMenu.Controls.Add(this.btmUtilidades);
             this.panelMenu.Controls.Add(this.panel5);
-            this.panelMenu.Controls.Add(this.btmReportes);
+            this.panelMenu.Controls.Add(this.btmReportesConsultas);
             this.panelMenu.Controls.Add(this.panel4);
             this.panelMenu.Controls.Add(this.btmTransacciones);
             this.panelMenu.Controls.Add(this.panel1);
@@ -239,21 +239,21 @@
             this.panel5.Size = new System.Drawing.Size(5, 32);
             this.panel5.TabIndex = 3;
             // 
-            // btmReportes
+            // btmReportesConsultas
             // 
-            this.btmReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmReportes.FlatAppearance.BorderSize = 0;
-            this.btmReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmReportes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmReportes.Location = new System.Drawing.Point(3, 132);
-            this.btmReportes.Name = "btmReportes";
-            this.btmReportes.Size = new System.Drawing.Size(208, 32);
-            this.btmReportes.TabIndex = 4;
-            this.btmReportes.Text = "Reporte/Consultas";
-            this.btmReportes.UseVisualStyleBackColor = false;
-            this.btmReportes.Click += new System.EventHandler(this.btmReportes_Click);
+            this.btmReportesConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmReportesConsultas.FlatAppearance.BorderSize = 0;
+            this.btmReportesConsultas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmReportesConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmReportesConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmReportesConsultas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmReportesConsultas.Location = new System.Drawing.Point(3, 132);
+            this.btmReportesConsultas.Name = "btmReportesConsultas";
+            this.btmReportesConsultas.Size = new System.Drawing.Size(208, 32);
+            this.btmReportesConsultas.TabIndex = 4;
+            this.btmReportesConsultas.Text = "Reporte/Consultas";
+            this.btmReportesConsultas.UseVisualStyleBackColor = false;
+            this.btmReportesConsultas.Click += new System.EventHandler(this.btmReportes_Click);
             // 
             // panel4
             // 
@@ -547,9 +547,9 @@
             // 
             this.subMenuReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.subMenuReporte.Controls.Add(this.panel17);
-            this.subMenuReporte.Controls.Add(this.btmInformeEmpleados);
+            this.subMenuReporte.Controls.Add(this.btmReportes);
             this.subMenuReporte.Controls.Add(this.panel19);
-            this.subMenuReporte.Controls.Add(this.btmListarSucursales);
+            this.subMenuReporte.Controls.Add(this.btmConsultas);
             this.subMenuReporte.Location = new System.Drawing.Point(0, 132);
             this.subMenuReporte.Name = "subMenuReporte";
             this.subMenuReporte.Size = new System.Drawing.Size(150, 69);
@@ -564,21 +564,21 @@
             this.panel17.Size = new System.Drawing.Size(5, 28);
             this.panel17.TabIndex = 7;
             // 
-            // btmInformeEmpleados
+            // btmReportes
             // 
-            this.btmInformeEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmInformeEmpleados.FlatAppearance.BorderSize = 0;
-            this.btmInformeEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmInformeEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmInformeEmpleados.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmInformeEmpleados.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmInformeEmpleados.Location = new System.Drawing.Point(3, 37);
-            this.btmInformeEmpleados.Name = "btmInformeEmpleados";
-            this.btmInformeEmpleados.Size = new System.Drawing.Size(147, 28);
-            this.btmInformeEmpleados.TabIndex = 8;
-            this.btmInformeEmpleados.Text = "Informe Empleados";
-            this.btmInformeEmpleados.UseVisualStyleBackColor = false;
-            this.btmInformeEmpleados.Click += new System.EventHandler(this.btmInformeEmpleados_Click);
+            this.btmReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmReportes.FlatAppearance.BorderSize = 0;
+            this.btmReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmReportes.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmReportes.Location = new System.Drawing.Point(3, 37);
+            this.btmReportes.Name = "btmReportes";
+            this.btmReportes.Size = new System.Drawing.Size(147, 28);
+            this.btmReportes.TabIndex = 8;
+            this.btmReportes.Text = "Reportes";
+            this.btmReportes.UseVisualStyleBackColor = false;
+            this.btmReportes.Click += new System.EventHandler(this.btmInformeEmpleados_Click);
             // 
             // panel19
             // 
@@ -588,21 +588,21 @@
             this.panel19.Size = new System.Drawing.Size(5, 28);
             this.panel19.TabIndex = 5;
             // 
-            // btmListarSucursales
+            // btmConsultas
             // 
-            this.btmListarSucursales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.btmListarSucursales.FlatAppearance.BorderSize = 0;
-            this.btmListarSucursales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btmListarSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmListarSucursales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmListarSucursales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btmListarSucursales.Location = new System.Drawing.Point(3, 3);
-            this.btmListarSucursales.Name = "btmListarSucursales";
-            this.btmListarSucursales.Size = new System.Drawing.Size(147, 28);
-            this.btmListarSucursales.TabIndex = 6;
-            this.btmListarSucursales.Text = "Listar Sucursales";
-            this.btmListarSucursales.UseVisualStyleBackColor = false;
-            this.btmListarSucursales.Click += new System.EventHandler(this.btmListarSucursales_Click);
+            this.btmConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btmConsultas.FlatAppearance.BorderSize = 0;
+            this.btmConsultas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btmConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmConsultas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmConsultas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btmConsultas.Location = new System.Drawing.Point(3, 3);
+            this.btmConsultas.Name = "btmConsultas";
+            this.btmConsultas.Size = new System.Drawing.Size(147, 28);
+            this.btmConsultas.TabIndex = 6;
+            this.btmConsultas.Text = "Consultas";
+            this.btmConsultas.UseVisualStyleBackColor = false;
+            this.btmConsultas.Click += new System.EventHandler(this.btmListarSucursales_Click);
             // 
             // subMenuUtilidades
             // 
@@ -822,7 +822,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btmUtilidades;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btmReportes;
+        private System.Windows.Forms.Button btmReportesConsultas;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btmTransacciones;
         private System.Windows.Forms.Panel subMenuEntidades;
@@ -859,9 +859,9 @@
         private System.Windows.Forms.Button btmUsuarios;
         private System.Windows.Forms.Panel subMenuReporte;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button btmInformeEmpleados;
+        private System.Windows.Forms.Button btmReportes;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Button btmListarSucursales;
+        private System.Windows.Forms.Button btmConsultas;
     }
 }
 

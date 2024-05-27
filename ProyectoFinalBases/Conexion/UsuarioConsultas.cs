@@ -54,6 +54,36 @@ namespace ProyectoFinalBases.Conexion
             return usuario;
         }
 
+        public Usuario getUser(int idUsuario)
+        {
+            Usuario usuario = new Usuario();
+            MySqlDataReader mReader = null;
+            try
+            {
+                MySqlConnection connection = conexionMysql.GetConnection();
+                string QUERY = "SELECT * FROM usuario WHERE idUsuario = @id;";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mCommand.Parameters.Add(new MySqlParameter("@id", idUsuario));
+                mReader = mCommand.ExecuteReader();
+
+                if (mReader.Read())
+                {
+                    usuario.idUsuario = mReader.GetInt32("idUsuario");
+                    usuario.login = mReader.GetString("login");
+                    usuario.clave = mReader.GetString("clave");
+                    usuario.tipoUsuario = mReader.GetInt16("tipoUsuario");
+                }
+                mReader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+            return usuario;
+        }
+
         public List<Usuario> GetUsuario(string filtro)
         {
             string QUERY = "SELECT * FROM usuario ";

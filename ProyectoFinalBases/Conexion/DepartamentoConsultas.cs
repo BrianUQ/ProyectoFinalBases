@@ -12,11 +12,13 @@ namespace ProyectoFinalBases.Conexion
     {
         private ConexionMysql conexionMysql;
         private List<Departamento> departamentos;
+        private List<ConsultaP2> consutasP2;
 
         public DepartamentoConsultas()
         {
             conexionMysql = new ConexionMysql();
             departamentos = new List<Departamento>();
+            consutasP2 = new List<ConsultaP2>();
         }
         public List<Departamento> GetDepartamentos(string filtro)
         {
@@ -95,5 +97,45 @@ namespace ProyectoFinalBases.Conexion
 
             return mCommand.ExecuteNonQuery() > 0;
         }
+
+        public List<ConsultaP2> GetCantidadSucursales()
+        {
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT d.nombreDepartamento, COUNT(s.idSucursal) As cantidad " +
+                    "FROM departamento d " +
+                    "JOIN municipio m ON d.idDepartamento = m.departamentoMunicipio " +
+                    "JOIN sucursal s ON m.departamentoMunicipio = s.ubicacionSucursal " +
+                    "GROUP BY d.nombreDepartamento " +
+                    "ORDER BY cantidad DESC;";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+
+                mReader = mCommand.ExecuteReader();
+
+                ConsultaP2 consultaP2 = null;
+
+                while (mReader.Read())
+                {
+                    consultaP2 = new ConsultaP2();
+                    consultaP2.Departamento = mReader.GetString("nombreDepartamento");
+                    consultaP2.CantidadSucursales = mReader.GetInt16("cantidad");
+                    consutasP2.Add(consultaP2);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consutasP2;
+        }
+    }
+
+    public class ConsultaP2
+    {
+        public string Departamento;
+        public int CantidadSucursales;
     }
 }

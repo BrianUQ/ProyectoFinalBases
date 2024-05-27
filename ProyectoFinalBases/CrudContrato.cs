@@ -17,7 +17,6 @@ namespace ProyectoFinalBases
     {
         private Contrato contrato;
         private ContratoConsulta contratoC;
-        private List<Contrato> contratos;
         private SucursalConsultas sucursalC;
         private MunicipioConsultas municipioC;
         private CargoConsultas cargoC;
@@ -30,7 +29,6 @@ namespace ProyectoFinalBases
         {
             contrato = new Contrato();
             contratoC = new ContratoConsulta();
-            contratos = new List<Contrato>();
             sucursalC = new SucursalConsultas();
             municipioC = new MunicipioConsultas();
             cargoC = new CargoConsultas();

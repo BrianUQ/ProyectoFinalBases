@@ -12,11 +12,15 @@ namespace ProyectoFinalBases.Conexion
     {
         private ConexionMysql conexionMysql;
         private List<Empleado> empleados;
+        private List<ConsultaA1> consultasA1;
+        private ConsultaE1 consultaE1;
 
         public EmpleadoConsultas()
         {
             conexionMysql = new ConexionMysql();
             empleados = new List<Empleado>();
+            consultasA1 = new List<ConsultaA1>();
+            consultaE1 = new ConsultaE1();
         }
 
         public List<Empleado> getEmpleados(string filtro)
@@ -104,5 +108,86 @@ namespace ProyectoFinalBases.Conexion
          
             return mCommand.ExecuteNonQuery() > 0;
         }
+
+        public List<ConsultaA1> GetEmpleadoSueldo()
+        {
+            MySqlDataReader mReader = null;
+            try
+            {
+                string QUERY = "SELECT e.nombreEmpleado, c.salarioCargo " +
+                    "FROM empleado e " +
+                    "JOIN contrato co ON e.idEmpleado = co.empleadoContrato " +
+                    "JOIN cargo c ON co.cargoContrato = c.idCargo; ";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+                
+                mReader = mCommand.ExecuteReader();
+
+                ConsultaA1 consulta = null;
+
+                while (mReader.Read())
+                {
+                    consulta = new ConsultaA1();
+                    consulta.Empleado = mReader.GetString("nombreEmpleado");
+                    consulta.Sueldo = mReader.GetFloat("salarioCargo");
+                    consultasA1.Add(consulta);
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consultasA1;
+        }
+
+        public ConsultaE1 GetEmpleadoCodigo(int id)
+        {
+            MySqlDataReader mReader = null;
+            ConsultaE1 consulta = null;
+            try
+            {
+                string QUERY = "SELECT s.nombreSucursal, s.direccionSucursal, m.nombreMunicipio " +
+                    "FROM empleado e " +
+                    "JOIN contrato co ON e.idEmpleado = co.empleadoContrato " +
+                    "JOIN sucursal s ON co.sucursalContrato = s.idSucursal " +
+                    "JOIN municipio m ON s.ubicacionSucursal = m.idMunicipio " +
+                    "WHERE e.idEmpleado = @id";
+                MySqlCommand mCommand = new MySqlCommand(QUERY, conexionMysql.GetConnection());
+                mCommand.Parameters.Add(new MySqlParameter("@id", id));
+                mReader = mCommand.ExecuteReader();
+
+                
+
+                if (mReader.Read())
+                {
+                    consulta = new ConsultaE1();
+                    consulta.Sucursal = mReader.GetString("nombreSucursal");
+                    consulta.Direccion = mReader.GetString("direccionSucursal");
+                    consulta.Municipio = mReader.GetString("nombreMunicipio");
+                }
+                mReader.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return consulta;
+        }
+    }
+
+    public class ConsultaA1
+    {
+        public string Empleado;
+        public float Sueldo;
+    }
+
+    public class ConsultaE1
+    {
+        public string Sucursal;
+        public string Direccion;
+        public string Municipio;
     }
 }
+
